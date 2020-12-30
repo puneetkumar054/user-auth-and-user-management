@@ -9,7 +9,6 @@ const userRoutes = (router) => {
     try {
       const _userInst = new UserService();
       let user= await _userInst.list();
-      console.log(user);
       res.render('users',{user});
     } catch (error) {
       res.send(error);

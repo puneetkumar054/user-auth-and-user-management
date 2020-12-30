@@ -14,7 +14,6 @@ const authRoutes = (router) => {
     });
 
     router.get('/login', function (req, res) {
-        console.log(req.user);
         if (req.user) {
             res.redirect('/profile');
         } else {
@@ -32,7 +31,6 @@ const authRoutes = (router) => {
         });
 
     router.get('/profile', ensureAuthenticated, function (req, res) {
-        console.log(req.user);
         res.render('profile', { user: req.user });
     });
 
