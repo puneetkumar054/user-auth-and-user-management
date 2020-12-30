@@ -1,0 +1,64 @@
+<style>
+
+/* Navabar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Avatar */
+.avatar {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+</style>
+
+<div class="navbar">
+    <a href="#" class="active">Profile</a>
+    <a href="/user/list-user">Users</a>
+    <a href="/logout">Logout</a>
+    <a href="#" class="right">
+        Hello <%= user.displayName %>
+    </a>
+    <a href="#" class="right">
+        <img src="<%= user.photos[0].value %>" alt="Avatar" class="avatar">
+    </a>
+</div>
+
+<div>
+    <p>Name: <%= user.displayName %></p>
+    <p>Email: <%= user._json.email%></p>
+</div>

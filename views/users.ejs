@@ -1,0 +1,63 @@
+<style>
+    .button {
+        background-color: rgb(51, 153, 248);
+        border-radius: 5px;
+        color: white;
+        padding: .5em;
+        text-decoration: none;
+    }
+
+    .button:focus,
+    .button:hover {
+        background-color: FireBrick;
+        color: White;
+    }
+    table{
+        width:100%;
+    }
+    table, th, td {
+
+       border: 1px solid black;
+    }
+</style>
+
+
+<h1>
+    User List
+</h1>
+<a href="/user/add-user" class="button" role="button">Add User</a>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <td>Age</td>
+        <td>Mobile</td>
+        <td>Role</td>
+        <td>Action</td>
+    </tr>
+    
+    <%if (user.length> 0) { %>
+        <% for (var i=0; i < user.length ; i++) { %>
+            
+            <tr>
+                
+                <td><%= user[i].name %></td>
+                <td><%= user[i].email %></td>
+                <td ><%= user[i].gender %></td>
+                <td ><%= user[i].age %></td>
+                <td ><%= user[i].mobile %></td>
+                <td ><%= user[i].userType %></td>
+                <tr row span="2">
+                    <td ><a href="/user/edit-user/<%= user[i]._id %>" role="button">Edit</a></td>
+                    <td ><a href="/user/delete/<%= user[i]._id %>">Delete</a></td>
+                </tr>
+            </tr>
+        <% } %>
+    <% } else{ %>  
+        <p>No data found.</p>
+    <% } %>
+</table>
+
+
