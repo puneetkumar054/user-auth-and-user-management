@@ -8,9 +8,9 @@ Run `node app.js 'or' nodemon app.js` for a dev server. Navigate to `http://loca
 ## Program Stacks 
     1. Node: 12.18.3
 
-## Credentials of twitter
+## Credentials of facebook
     1. Make an account on facebook.
-    2. Make developer account on twitter : https://developers.facebook.com/ ->Exploring the API -> Next -> proceed according your choice
+    2. Make developer account on facebook : https://developers.facebook.com/ ->Exploring the API -> Next -> proceed according your choice
     3. After all of this you will get :-
         CLIENTID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -27,7 +27,7 @@ Run `node app.js 'or' nodemon app.js` for a dev server. Navigate to `http://loca
 
     3.Install all the dependency by- Run: npm i 
 
-    4. Set all twitter credentials in .env file on going in project folder        
+    4. Set all facebook credentials in .env file on going in project folder        
             SERVER_HOST=localhost
             SERVER_PORT=3000
             CLIENTID=XXXXXXXXXXXXXXXXXXXXXXX
